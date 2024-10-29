@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Heatmap Test</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 600px;"></div>
+  <script>
+    const map = L.map('map').setView([41.3851, 2.1734], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const heatData = [
+      [41.3851, 2.1734, 0.5],
+      [41.3861, 2.1744, 0.8],
+      [41.3841, 2.1754, 0.2]
+    ];
+    
+    const heatLayer = L.heatLayer(heatData, { radius: 20 }).addTo(map);
+  </script>
+</body>
+</html>
