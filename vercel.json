@@ -2,17 +2,22 @@
     "version": 2,
     "builds": [
       {
-        "src": "dist/frontend-turisme-sostenible/browser/**",
+        "src": "dist/frontend-turisme-sostenible/browser/**/*",
         "use": "@vercel/static"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "headers": {
-          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com;"
-        },
-        "dest": "/$1"
+        "dest": "/index.html"
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
+      {
+        "key": "Content-Security-Policy",
+        "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com;"
       }
     ]
   }
