@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+import 'leaflet.heat';
 import { Observable } from 'rxjs';
 import { ConcentrationData } from '../interfaces/tourism.interface';
 

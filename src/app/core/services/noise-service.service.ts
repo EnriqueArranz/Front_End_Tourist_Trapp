@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NoiseData } from '../interfaces/tourism.interface';
+import * as L from 'leaflet';
+import 'leaflet.heat';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NoiseServiceService {
+  private map!: L.Map;
 
   constructor(private http: HttpClient) { }
 
