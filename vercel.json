@@ -6,13 +6,12 @@
         "use": "@vercel/static"
       }
     ],
-    "routes": [
+    "headers": [
       {
-        "src": "/(.*)",
+        "source": "/(.*)",
         "headers": {
           "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com;"
-        },
-        "dest": "/$1"
+        }
       }
     ],
     "cleanUrls": true,
