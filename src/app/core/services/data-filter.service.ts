@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConcentrationData, NoiseData } from '../interfaces/tourism.interface';
+import * as L from 'leaflet';
+import 'leaflet.heat';
 
 @Injectable({
   providedIn: 'root'
