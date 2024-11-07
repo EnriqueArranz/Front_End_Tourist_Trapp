@@ -13,7 +13,7 @@ export class MapApiService {
   constructor(private http: HttpClient) { }
 
   loadConcentrationData(): Observable<ConcentrationData[]> {
-    return this.http.get<ConcentrationData[]>('http://localhost:8080/api/touristConcentration/all')
+    return this.http.get<ConcentrationData[]>('https://backendtouristtrapp-production.up.railway.app/api/touristConcentration/all')
   }
 
 }

@@ -11,6 +11,6 @@ export class NoiseServiceService {
   constructor(private http: HttpClient) { }
 
   loadNoiseData(): Observable<NoiseData[]> {
-    return this.http.get<NoiseData[]>('http://localhost:8080/api/noise/all');
+    return this.http.get<NoiseData[]>('https://backendtouristtrapp-production.up.railway.app/api/noise/all');
   }
 }

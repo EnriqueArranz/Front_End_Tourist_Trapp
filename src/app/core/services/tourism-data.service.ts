@@ -7,7 +7,7 @@ import { TourismPoint } from '../interfaces/tourism.interface';
   providedIn: 'root',
 })
 export class TourismDataService {
-  private jsonUrl = 'http://localhost:8080/api/culturalPlace/all';
+  private jsonUrl = 'https://backendtouristtrapp-production.up.railway.app/api/culturalPlace/all';
 
   private http = inject(HttpClient)
 
